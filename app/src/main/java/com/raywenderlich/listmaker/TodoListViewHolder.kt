@@ -1,8 +1,8 @@
-package com.raywenderlich.listmaker;
+package com.raywenderlich.listmaker
 
-import android.view.View;
+import android.view.View
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView
 
 class TodoListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
