@@ -18,5 +18,6 @@ class DetailActivity : AppCompatActivity() {
 
         taskListRecyclerView = findViewById(R.id.task_list_recyclerview)
         taskListRecyclerView.layoutManager = LinearLayoutManager(this)
+        taskListRecyclerView.adapter = TaskListAdapter(list)
     }
 }
