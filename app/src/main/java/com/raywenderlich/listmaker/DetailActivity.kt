@@ -1,5 +1,7 @@
 package com.raywenderlich.listmaker
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
@@ -29,6 +31,16 @@ class DetailActivity : AppCompatActivity() {
         addTaskButton.setOnClickListener {
             showCreateTaskDialog()
         }
+    }
+
+    override fun onBackPressed() {
+        val bundle = Bundle()
+        bundle.putParcelable(MainActivity.INTENT_LIST_KEY, list)
+
+        val intent = Intent()
+        intent.putExtras(bundle)
+        setResult(Activity.RESULT_OK, intent)
+        super.onBackPressed()
     }
 
     private fun showCreateTaskDialog() {
